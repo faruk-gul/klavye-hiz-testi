@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Klavye Hız Testi</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="app-card">
+        <header class="hero">
+          <p class="eyebrow">10 parmak antrenmanı</p>
+          <h1>Klavye Hız Testi</h1>
+          <p class="hero-copy">
+            Rastgele Türkçe kelimelerle 60 saniyelik hız testi. Yanlış harfler kırmızı,
+            doğru harfler canlı görünür.
+          </p>
+        </header>
+
+        <section class="stats-grid">
+          <article class="stat-box">
+            <span>Kalan süre</span>
+            <strong id="time-left">60 sn</strong>
+          </article>
+          <article class="stat-box">
+            <span>WPM</span>
+            <strong id="wpm">0</strong>
+          </article>
+          <article class="stat-box">
+            <span>Doğruluk</span>
+            <strong id="accuracy">100%</strong>
+          </article>
+          <article class="stat-box">
+            <span>Doğru kelime</span>
+            <strong id="correct-words">0</strong>
+          </article>
+        </section>
+
+        <section class="settings-panel">
+          <label for="duration-select">Test süresi</label>
+          <select id="duration-select">
+            <option value="30">30 saniye</option>
+            <option value="60" selected>60 saniye</option>
+            <option value="120">120 saniye</option>
+            <option value="180">180 saniye</option>
+          </select>
+        </section>
+
+        <section class="text-panel">
+          <div id="text-display" class="text-display" aria-live="polite"></div>
+        </section>
+
+        <section class="input-panel">
+          <label for="typing-input">Yazmaya başla</label>
+          <textarea
+            id="typing-input"
+            rows="5"
+            placeholder="Sayaç ilk tuşa bastığında başlar..."
+            autocomplete="off"
+            autocorrect="off"
+            autocapitalize="off"
+            spellcheck="false"
+          ></textarea>
+        </section>
+
+        <section class="controls">
+          <button id="restart-button" class="primary-button">Yeniden başlat</button>
+        </section>
+
+        <section class="results-card">
+          <h2>Tur Sonucu</h2>
+          <p id="result-text">
+            1 dakikalık testte kaç kelime yazabildiğini ve ne kadar isabetli olduğunu burada
+            göreceksin.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
